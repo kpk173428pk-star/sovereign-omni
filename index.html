@@ -1,0 +1,3019 @@
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SovereignOmni.io — Hyper-Scalable Interest-Free Everything Marketplace &amp; SaaS OS</title>
+  <meta name="description" content="The World's Largest Hyper-Scalable Interest-Free Everything Marketplace & SaaS Operating System. Sub-1ms execution, 0.1% Sovereign Tech Fee, 100% Halal." />
+  <style>
+    :root {
+      --bg-primary: #020617;
+      --bg-emerald: #012415;
+      --bg-surface: rgba(6, 28, 22, 0.58);
+      --bg-surface-strong: rgba(3, 18, 14, 0.88);
+      --bg-card-hover: rgba(10, 42, 33, 0.72);
+      --border-glass: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(20, 184, 166, 0.35);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-teal: #14b8a6;
+      --accent-teal-glow: rgba(20, 184, 166, 0.32);
+      --accent-amber: #f59e0b;
+      --accent-amber-glow: rgba(245, 158, 11, 0.28);
+      --accent-emerald: #10b981;
+      --danger: #f43f5e;
+      --shadow-luxury: 0 24px 60px -15px rgba(0, 0, 0, 0.75);
+      --shadow-hover: 0 20px 45px -12px rgba(20, 184, 166, 0.25), 0 0 24px rgba(245, 158, 11, 0.12);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Inter, "Noto Sans Arabic", "Noto Nastaliq Urdu", sans-serif;
+      --font-mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+      --header-h: 74px;
+    }
+
+    html[data-theme="light"] {
+      --bg-primary: #f1f7f5;
+      --bg-emerald: #d9f2e6;
+      --bg-surface: rgba(255, 255, 255, 0.78);
+      --bg-surface-strong: rgba(255, 255, 255, 0.94);
+      --bg-card-hover: rgba(255, 255, 255, 0.96);
+      --border-glass: rgba(6, 78, 59, 0.12);
+      --border-strong: rgba(13, 148, 136, 0.45);
+      --text-primary: #042f2e;
+      --text-secondary: #335c56;
+      --text-muted: #5b7c76;
+      --accent-teal: #0d9488;
+      --accent-teal-glow: rgba(13, 148, 136, 0.22);
+      --accent-amber: #d97706;
+      --accent-amber-glow: rgba(217, 119, 6, 0.2);
+      --accent-emerald: #059669;
+      --shadow-luxury: 0 20px 50px -15px rgba(4, 47, 46, 0.12);
+      --shadow-hover: 0 22px 42px -12px rgba(13, 148, 136, 0.22), 0 0 20px rgba(217, 119, 6, 0.14);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      background: radial-gradient(circle at 18% 0%, var(--bg-emerald) 0%, var(--bg-primary) 58%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+      transition: color 0.12s ease, background 0.18s ease;
+    }
+
+    /* GPU-Accelerated Fluid Mesh Blobs */
+    .mesh-stage {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .mesh-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(95px);
+      opacity: 0.42;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+    }
+
+    html[data-theme="light"] .mesh-blob {
+      opacity: 0.28;
+    }
+
+    .blob-1 {
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, #065f46 0%, transparent 70%);
+      top: -140px;
+      left: -100px;
+      animation: floatBlob1 22s ease-in-out infinite alternate;
+    }
+
+    .blob-2 {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, #0f766e 0%, transparent 70%);
+      top: 30%;
+      right: -120px;
+      animation: floatBlob2 26s ease-in-out infinite alternate;
+    }
+
+    .blob-3 {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.45) 0%, transparent 70%);
+      bottom: -140px;
+      left: 32%;
+      animation: floatBlob3 30s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBlob1 {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      100% { transform: translate3d(90px, 70px, 0) scale(1.16); }
+    }
+    @keyframes floatBlob2 {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      100% { transform: translate3d(-110px, -60px, 0) scale(1.12); }
+    }
+    @keyframes floatBlob3 {
+      0% { transform: translate3d(0, 0, 0) scale(1); }
+      100% { transform: translate3d(70px, -85px, 0) scale(1.18); }
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .glass {
+      background: var(--bg-surface);
+      backdrop-filter: blur(28px) saturate(160%);
+      -webkit-backdrop-filter: blur(28px) saturate(160%);
+      border: 1px solid var(--border-glass);
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* Top Sovereign Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      height: var(--header-h);
+      background: var(--bg-surface-strong);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #059669 0%, #14b8a6 55%, #f59e0b 100%);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 24px var(--accent-teal-glow);
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--accent-teal);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .latency-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 11px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      color: var(--accent-teal);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 10px var(--accent-emerald);
+      animation: pulseDot 1.6s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.8); }
+    }
+
+    .capsule-group {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-glass);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    html[data-theme="light"] .capsule-group {
+      background: rgba(4, 47, 46, 0.05);
+    }
+
+    .capsule-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.1s ease, background 0.12s ease, color 0.12s ease;
+    }
+
+    .capsule-btn.active {
+      background: linear-gradient(135deg, var(--accent-teal), #059669);
+      color: #ffffff;
+      box-shadow: 0 2px 12px var(--accent-teal-glow);
+    }
+
+    .icon-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid var(--border-glass);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+
+    html[data-theme="light"] .icon-btn {
+      background: rgba(4, 47, 46, 0.05);
+    }
+
+    .icon-btn:hover {
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 18px var(--accent-teal-glow);
+      transform: translateY(-1px);
+    }
+
+    .icon-btn.amber-btn:hover {
+      border-color: var(--accent-amber);
+      box-shadow: 0 0 18px var(--accent-amber-glow);
+    }
+
+    .cart-badge {
+      background: linear-gradient(135deg, var(--accent-amber), #ea580c);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+    }
+
+    /* Hero Sovereign Section */
+    .hero {
+      padding: 42px 0 28px;
+    }
+
+    .hero-card {
+      border-radius: 28px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.09), transparent 45%),
+                  radial-gradient(circle at 10% 90%, rgba(20, 184, 166, 0.12), transparent 50%);
+      pointer-events: none;
+    }
+
+    .halal-seal {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(16, 185, 129, 0.16), rgba(245, 158, 11, 0.16));
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      box-shadow: 0 0 28px rgba(245, 158, 11, 0.16), inset 0 0 12px rgba(20, 184, 166, 0.15);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 1.07;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #2dd4bf 0%, #10b981 45%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-primary {
+      border: none;
+      border-radius: 14px;
+      padding: 13px 22px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 800;
+      cursor: pointer;
+      color: #ffffff;
+      background: linear-gradient(135deg, #059669 0%, #14b8a6 100%);
+      box-shadow: 0 12px 30px -6px var(--accent-teal-glow);
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px -6px var(--accent-teal-glow), 0 0 22px var(--accent-amber-glow);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border-glass);
+      border-radius: 14px;
+      padding: 13px 20px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+      transition: all 0.14s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-amber);
+      box-shadow: 0 0 22px var(--accent-amber-glow);
+      transform: translateY(-2px);
+    }
+
+    /* Telemetry HUD Panel in Hero */
+    .telemetry-hud {
+      border-radius: 20px;
+      padding: 20px;
+      background: rgba(2, 16, 14, 0.65);
+      border: 1px solid rgba(20, 184, 166, 0.28);
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    html[data-theme="light"] .telemetry-hud {
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .hud-stat {
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+    }
+
+    .hud-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .hud-value {
+      font-size: 1.28rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      color: var(--text-primary);
+    }
+
+    .hud-value.teal { color: var(--accent-teal); }
+    .hud-value.amber { color: var(--accent-amber); }
+
+    /* Predictive Search & Category Matrix Bar */
+    .search-matrix {
+      margin: 12px 0 26px;
+      border-radius: 22px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon {
+      position: absolute;
+      inset-inline-start: 16px;
+      color: var(--accent-teal);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 50px;
+      border-radius: 14px;
+      border: 1px solid var(--border-glass);
+      background: rgba(0, 0, 0, 0.25);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 500;
+      padding-inline-start: 46px;
+      padding-inline-end: 120px;
+      outline: none;
+      transition: border-color 0.14s ease, box-shadow 0.14s ease;
+    }
+
+    html[data-theme="light"] .search-input {
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 0 3px var(--accent-teal-glow);
+    }
+
+    .search-meta-badge {
+      position: absolute;
+      inset-inline-end: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-teal);
+      background: rgba(20, 184, 166, 0.12);
+      padding: 4px 9px;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    .pillar-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pillar-tab {
+      border: 1px solid var(--border-glass);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 9px 15px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.14s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .pillar-tab:hover {
+      border-color: var(--accent-teal);
+      color: var(--text-primary);
+    }
+
+    .pillar-tab.active {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.24), rgba(16, 185, 129, 0.16));
+      border-color: var(--accent-teal);
+      color: var(--text-primary);
+      box-shadow: 0 0 20px var(--accent-teal-glow);
+    }
+
+    /* Hyper-Grid Catalog (Zero Layout Shift Container) */
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+
+    .section-head p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+      gap: 20px;
+      min-height: 460px;
+      align-content: start;
+    }
+
+    .product-card {
+      border-radius: var(--radius-xl);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card-svg-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.18), rgba(245, 158, 11, 0.1));
+      border: 1px solid rgba(20, 184, 166, 0.28);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .card-badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+    }
+
+    .pill-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(20, 184, 166, 0.14);
+      color: var(--accent-teal);
+      border: 1px solid rgba(20, 184, 166, 0.28);
+    }
+
+    .stock-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 8px;
+      background: rgba(16, 185, 129, 0.14);
+      color: var(--accent-emerald);
+    }
+
+    .stock-tag.low {
+      background: rgba(245, 158, 11, 0.16);
+      color: var(--accent-amber);
+    }
+
+    .stock-tag.out {
+      background: rgba(244, 63, 94, 0.16);
+      color: var(--danger);
+    }
+
+    .card-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.015em;
+      margin-bottom: 4px;
+    }
+
+    .card-desc {
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .option-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .option-pill {
+      border: 1px solid var(--border-glass);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+
+    .option-pill.selected {
+      background: rgba(20, 184, 166, 0.22);
+      border-color: var(--accent-teal);
+      color: var(--text-primary);
+    }
+
+    .card-meta-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      padding-top: 6px;
+      border-top: 1px dashed var(--border-glass);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .price-block .price-main {
+      font-size: 1.32rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+
+    .price-block .price-fee {
+      font-size: 0.68rem;
+      color: var(--accent-amber);
+      font-weight: 700;
+    }
+
+    .add-cart-btn {
+      border: none;
+      border-radius: 12px;
+      padding: 10px 15px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(135deg, #059669, #14b8a6);
+      box-shadow: 0 8px 20px -6px var(--accent-teal-glow);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .add-cart-btn:hover:not(:disabled) {
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px -6px var(--accent-teal-glow), 0 0 16px var(--accent-amber-glow);
+    }
+
+    .add-cart-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    /* Empty Search State */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 56px 20px;
+      border-radius: 22px;
+      border: 1px dashed var(--border-glass);
+    }
+
+    /* Module 4: Live Testimonial Slider Engine */
+    .testimonials-section {
+      margin: 54px 0;
+    }
+
+    .testimonial-shell {
+      border-radius: 24px;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .slider-viewport {
+      overflow: hidden;
+      border-radius: 18px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+
+    .slide-item {
+      min-width: 100%;
+      padding: 24px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .stars-row {
+      color: var(--accent-amber);
+      font-size: 1.05rem;
+      letter-spacing: 2px;
+    }
+
+    .slide-quote {
+      font-size: 1.04rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .slide-author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .author-meta strong {
+      display: block;
+      font-size: 0.92rem;
+    }
+
+    .author-meta span {
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+    }
+
+    .slider-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .dot-btn {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: none;
+      background: var(--border-glass);
+      cursor: pointer;
+      transition: width 0.2s ease, background 0.2s ease;
+    }
+
+    .dot-btn.active {
+      width: 24px;
+      background: var(--accent-teal);
+    }
+
+    .review-form {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .review-form h3 {
+      font-size: 1.04rem;
+      font-weight: 800;
+    }
+
+    .field-input, .field-select, .field-textarea {
+      width: 100%;
+      border-radius: 11px;
+      border: 1px solid var(--border-glass);
+      background: rgba(0, 0, 0, 0.22);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.86rem;
+      padding: 10px 13px;
+      outline: none;
+    }
+
+    html[data-theme="light"] .field-input,
+    html[data-theme="light"] .field-select,
+    html[data-theme="light"] .field-textarea {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .field-input:focus, .field-select:focus, .field-textarea:focus {
+      border-color: var(--accent-teal);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 64px;
+      padding: 28px 0 40px;
+      border-top: 1px solid var(--border-glass);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* Side-Sliding Cart Drawer */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.68);
+      backdrop-filter: blur(6px);
+      z-index: 90;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .drawer-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      inset-inline-end: 0;
+      width: min(470px, 100vw);
+      height: 100vh;
+      z-index: 100;
+      background: var(--bg-surface-strong);
+      backdrop-filter: blur(32px);
+      border-inline-start: 1px solid var(--border-glass);
+      transform: translate3d(105%, 0, 0);
+      transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    html[dir="rtl"] .cart-drawer {
+      transform: translate3d(-105%, 0, 0);
+    }
+
+    .cart-drawer.open {
+      transform: translate3d(0, 0, 0) !important;
+    }
+
+    .drawer-head {
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--border-glass);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cart-item {
+      padding: 13px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-glass);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qty-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid var(--border-glass);
+      border-radius: 10px;
+      padding: 3px;
+    }
+
+    html[data-theme="light"] .qty-controls {
+      background: rgba(4, 47, 46, 0.06);
+    }
+
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .qty-btn:hover {
+      background: rgba(20, 184, 166, 0.22);
+    }
+
+    .drawer-foot {
+      padding: 18px 22px 24px;
+      border-top: 1px solid var(--border-glass);
+      background: rgba(0, 0, 0, 0.16);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+
+    .summary-line.total {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      padding-top: 8px;
+      border-top: 1px dashed var(--border-glass);
+    }
+
+    /* Modals (Checkout / WhatsApp Manifest, Executive Control Room, White-Label Invoice) */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      background: rgba(2, 6, 23, 0.78);
+      backdrop-filter: blur(10px);
+      display: none;
+      place-items: center;
+      padding: 18px;
+      overflow-y: auto;
+    }
+
+    .modal-overlay.open {
+      display: grid;
+    }
+
+    .modal-box {
+      width: min(640px, 100%);
+      border-radius: 24px;
+      padding: 26px;
+      background: var(--bg-surface-strong);
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-luxury);
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+
+    .modal-box.wide {
+      width: min(1160px, 100%);
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .close-x {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid var(--border-glass);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* Executive Analytics Control Room */
+    .exec-grid-kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .kpi-card {
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+    }
+
+    .exec-charts-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .chart-panel {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+    }
+
+    .exec-lists-row {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 16px;
+    }
+
+    .feed-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+
+    .feed-table th, .feed-table td {
+      padding: 8px 6px;
+      text-align: start;
+      border-bottom: 1px solid var(--border-glass);
+    }
+
+    .feed-table th {
+      color: var(--text-secondary);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+    }
+
+    /* White-Label Invoice Screen */
+    .invoice-sheet {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+
+    .invoice-watermark {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      opacity: 0.05;
+      font-size: 3.4rem;
+      font-weight: 900;
+      transform: rotate(-24deg);
+      color: #065f46;
+      letter-spacing: 0.1em;
+    }
+
+    .inv-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 0.86rem;
+    }
+
+    .inv-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 10px;
+      text-align: start;
+      border-bottom: 2px solid #cbd5e1;
+    }
+
+    .inv-table td {
+      padding: 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      inset-inline-end: 24px;
+      z-index: 200;
+      padding: 13px 18px;
+      border-radius: 14px;
+      background: var(--bg-surface-strong);
+      border: 1px solid var(--accent-teal);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45), 0 0 22px var(--accent-teal-glow);
+      font-size: 0.84rem;
+      font-weight: 700;
+      transform: translateY(120px);
+      opacity: 0;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 960px) {
+      .hero-card, .testimonial-shell, .exec-charts-row, .exec-lists-row {
+        grid-template-columns: 1fr;
+      }
+      .navbar {
+        height: auto;
+        padding: 10px 0;
+      }
+    }
+
+    @media print {
+      body * {
+        visibility: hidden !important;
+      }
+      #invoiceModal, #invoiceModal * {
+        visibility: visible !important;
+      }
+      #invoiceModal {
+        position: absolute !important;
+        inset: 0 !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+        display: block !important;
+      }
+      #invoiceModal .modal-box {
+        width: 100% !important;
+        max-height: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .invoice-sheet {
+        border: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hardware-Accelerated Fluid Mesh Gradient Stage -->
+  <div class="mesh-stage" aria-hidden="true">
+    <div class="mesh-blob blob-1"></div>
+    <div class="mesh-blob blob-2"></div>
+    <div class="mesh-blob blob-3"></div>
+  </div>
+
+  <!-- Sovereign Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"></polygon>
+            <circle cx="12" cy="12" r="3.2"></circle>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>SovereignOmni.io</h1>
+          <span data-i18n="brandTag">Hyper-Scalable Halal OS</span>
+        </div>
+      </a>
+
+      <div class="nav-controls">
+        <div class="latency-pill" title="Live Sub-1ms RAM Execution Engine">
+          <span class="pulse-dot"></span>
+          <span id="latencyReadout">0.18 ms</span>
+        </div>
+
+        <!-- Multi-Currency Matrix Capsule -->
+        <div class="capsule-group" id="currencyCapsule" role="group" aria-label="Currency Matrix">
+          <button type="button" class="capsule-btn active" data-currency="PKR">PKR</button>
+          <button type="button" class="capsule-btn" data-currency="USD">USD $</button>
+          <button type="button" class="capsule-btn" data-currency="SAR">SAR ریال</button>
+        </div>
+
+        <!-- 1ms Translation Shield -->
+        <button type="button" class="icon-btn" id="langToggleBtn" aria-label="Toggle Language">
+          <span id="langLabel">اردو / EN</span>
+        </button>
+
+        <!-- Zero-Latency Theme Toggle -->
+        <button type="button" class="icon-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Theme">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <!-- Executive Analytics Control Room Trigger -->
+        <button type="button" class="icon-btn amber-btn" id="openExecBtn">
+          <span>⚡</span>
+          <span data-i18n="execBtn">Executive OS</span>
+        </button>
+
+        <!-- Cart Drawer Trigger -->
+        <button type="button" class="icon-btn" id="openCartBtn">
+          <span>🛒</span>
+          <span data-i18n="cartBtn">Cart</span>
+          <span class="cart-badge tabular" id="cartCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero Sovereign Matrix -->
+    <section class="hero">
+      <div class="hero-card glass">
+        <div>
+          <div class="halal-seal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <span data-i18n="halalSeal">0.1% Sovereign Tech Fee — 100% Halal, Direct &amp; Transparent Partner Matrix — Zero Riba</span>
+          </div>
+
+          <h2 class="hero-title">
+            <span data-i18n="heroTitle1">The World’s Largest</span>
+            <span class="gradient-text" data-i18n="heroTitle2">Interest-Free Everything Marketplace</span>
+            <span data-i18n="heroTitle3">&amp; SaaS Operating System</span>
+          </h2>
+
+          <p class="hero-sub" data-i18n="heroSubtitle">
+            Engineered on raw browser RAM registers and GPU-composited rendering pipelines for sub-millisecond global commerce, enterprise SaaS subscriptions, freelance orchestration, and pure organic trade.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn-primary" id="scrollCatalogBtn">
+              <span data-i18n="exploreBtn">Explore Global Hyper-Grid</span>
+              <span>→</span>
+            </button>
+            <button type="button" class="btn-secondary" id="quickInvoiceSampleBtn">
+              <span>🧾</span>
+              <span data-i18n="sampleInvoiceBtn">White-Label Invoice Demo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Real-Time RAM Telemetry HUD -->
+        <div class="telemetry-hud">
+          <div class="hud-stat">
+            <div class="hud-label" data-i18n="hudLatency">DOM / Filter Latency</div>
+            <div class="hud-value teal" id="hudLatencyVal">0.16 ms</div>
+          </div>
+          <div class="hud-stat">
+            <div class="hud-label" data-i18n="hudFee">Sovereign Tech Fee</div>
+            <div class="hud-value amber">0.10%</div>
+          </div>
+          <div class="hud-stat">
+            <div class="hud-label" data-i18n="hudSkus">Active Global SKUs</div>
+            <div class="hud-value" id="hudSkuCount">16</div>
+          </div>
+          <div class="hud-stat">
+            <div class="hud-label" data-i18n="hudRiba">Interest / Riba Ratio</div>
+            <div class="hud-value teal">0.00%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1ms Predictive Search & Pillar Filter -->
+    <section id="marketplace" class="search-matrix glass">
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="search"
+            id="predictiveSearch"
+            class="search-input"
+            autocomplete="off"
+            placeholder="Instant 1ms Search across SaaS, Global Goods, Enterprise Talent & Pure Organics..."
+            data-i18n-placeholder="searchPlaceholder"
+          />
+          <span class="search-meta-badge tabular" id="searchMatchBadge">16 / 16 • 0.1ms</span>
+        </div>
+      </div>
+
+      <div class="pillar-tabs" id="pillarTabs" role="tablist">
+        <button type="button" class="pillar-tab active" data-pillar="all" data-i18n="pillarAll">All Pillars (16)</button>
+        <button type="button" class="pillar-tab" data-pillar="goods" data-i18n="pillarGoods">Global Consumer Goods</button>
+        <button type="button" class="pillar-tab" data-pillar="saas" data-i18n="pillarSaas">Digital SaaS Solutions</button>
+        <button type="button" class="pillar-tab" data-pillar="services" data-i18n="pillarServices">Freelance / Enterprise Services</button>
+        <button type="button" class="pillar-tab" data-pillar="organic" data-i18n="pillarOrganic">Natural / Organic Tiers</button>
+      </div>
+    </section>
+
+    <!-- Hyper-Grid Marketplace -->
+    <section>
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="catalogTitle">Global Sovereign Marketplace</h2>
+          <p data-i18n="catalogSub">Zero-Riba transparent pricing with instant option matrix and real-time inventory registers.</p>
+        </div>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid"></div>
+    </section>
+
+    <!-- Module 4: Live Testimonial Slider Engine -->
+    <section class="testimonials-section">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="reviewsTitle">Verified Sovereign Partner Matrix</h2>
+          <p data-i18n="reviewsSub">Real-time merchant &amp; enterprise feedback stored in local cryptographic state.</p>
+        </div>
+        <div class="latency-pill tabular" id="avgRatingPill">★ 4.9 / 5.0</div>
+      </div>
+
+      <div class="testimonial-shell glass">
+        <div class="slider-viewport">
+          <div class="slider-track" id="testimonialTrack"></div>
+          <div class="slider-controls">
+            <div style="display:flex; gap:8px;">
+              <button type="button" class="icon-btn" id="prevSlideBtn" aria-label="Previous Testimonial">←</button>
+              <button type="button" class="icon-btn" id="nextSlideBtn" aria-label="Next Testimonial">→</button>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+          </div>
+        </div>
+
+        <form class="review-form" id="reviewForm">
+          <h3 data-i18n="addReviewTitle">Submit Partner Review</h3>
+          <input type="text" id="revName" class="field-input" required placeholder="Your Name / Enterprise" data-i18n-placeholder="revNamePh" />
+          <input type="text" id="revRole" class="field-input" required placeholder="Role / City (e.g. CTO, Lahore)" data-i18n-placeholder="revRolePh" />
+          <select id="revRating" class="field-select">
+            <option value="5">★★★★★ — 5.0 Sovereign Excellence</option>
+            <option value="4">★★★★☆ — 4.0 Enterprise Grade</option>
+            <option value="3">★★★☆☆ — 3.0 Solid Performance</option>
+          </select>
+          <textarea id="revComment" rows="3" class="field-textarea" required placeholder="Share your zero-riba commerce experience..." data-i18n-placeholder="revCommentPh"></textarea>
+          <button type="submit" class="btn-primary" style="justify-content:center;" data-i18n="submitReviewBtn">Publish to Live Slider</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>SovereignOmni.io</strong> — <span data-i18n="footerCopy">100% Halal Interest-Free Global Commerce &amp; SaaS OS.</span>
+      </div>
+      <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+        <span>Key Hint: <code style="color:var(--accent-amber);">OMNI-SOVEREIGN-2026</code></span>
+        <button type="button" class="icon-btn" id="footerExecBtn" data-i18n="openControlRoom">Open Control Room</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Side-Sliding High-Performance Cart Drawer -->
+  <div class="drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="drawer-head">
+      <div>
+        <h3 style="font-size:1.12rem; font-weight:800;" data-i18n="cartTitle">Sovereign Order Matrix</h3>
+        <span style="font-size:0.75rem; color:var(--text-secondary);" data-i18n="cartSub">Reactive LocalStorage Engine</span>
+      </div>
+      <button type="button" class="close-x" id="closeCartBtn">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cartItems"></div>
+
+    <div class="drawer-foot">
+      <div class="summary-line">
+        <span data-i18n="sumSubtotal">Subtotal</span>
+        <strong class="tabular" id="sumSubtotal">0</strong>
+      </div>
+      <div class="summary-line">
+        <span data-i18n="sumTechFee">0.1% Sovereign Tech Fee (Halal)</span>
+        <strong class="tabular" style="color:var(--accent-amber);" id="sumTechFee">0</strong>
+      </div>
+      <div class="summary-line">
+        <span data-i18n="sumTax">Compliance GST / VAT (2.5%)</span>
+        <strong class="tabular" id="sumTax">0</strong>
+      </div>
+      <div class="summary-line">
+        <span><span data-i18n="sumShipping">Logistics</span> (<span id="sumWeight" class="tabular">0.0 kg</span>)</span>
+        <strong class="tabular" id="sumShipping">0</strong>
+      </div>
+      <div class="summary-line total">
+        <span data-i18n="sumTotal">Grand Total</span>
+        <span class="tabular" id="sumTotal">0</span>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
+        <button type="button" class="btn-secondary" id="clearCartBtn" style="justify-content:center; padding:11px;" data-i18n="clearCartBtn">Clear</button>
+        <button type="button" class="btn-primary" id="proceedCheckoutBtn" style="justify-content:center; padding:11px;" data-i18n="checkoutBtn">Checkout &amp; Manifest</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Module 1: Cryptographic WhatsApp Manifest & Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div>
+          <h3 style="font-size:1.2rem; font-weight:800;" data-i18n="manifestTitle">Cryptographic WhatsApp Manifest Hub</h3>
+          <p style="font-size:0.78rem; color:var(--text-secondary);" data-i18n="manifestSub">Encodes verified order matrix into instant WhatsApp API payload + White-Label Invoice</p>
+        </div>
+        <button type="button" class="close-x" data-close-modal="checkoutModal">✕</button>
+      </div>
+
+      <form id="checkoutForm" style="display:flex; flex-direction:column; gap:12px;">
+        <input type="text" id="chkName" class="field-input" required placeholder="Client Full Name / Company" />
+        <input type="tel" id="chkPhone" class="field-input" required placeholder="WhatsApp Number (e.g. +923001234567)" />
+        <input type="text" id="chkLocation" class="field-input" required placeholder="Delivery Address / City / Country" />
+        <input type="text" id="chkMerchantWa" class="field-input" value="923000002026" placeholder="Target Sovereign Merchant WhatsApp (digits)" />
+
+        <div id="manifestPreviewBox" style="display:none; padding:14px; border-radius:14px; background:rgba(20,184,166,0.09); border:1px solid var(--accent-teal); font-size:0.78rem;">
+          <div style="font-weight:800; color:var(--accent-teal); margin-bottom:6px;">🔐 Cryptographic Manifest Encoded</div>
+          <div id="manifestHashText" style="font-family:var(--font-mono); word-break:break-all; margin-bottom:10px; color:var(--text-secondary);"></div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a id="waLaunchLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="text-decoration:none; padding:9px 14px; font-size:0.8rem;">📲 Execute via WhatsApp API</a>
+            <button type="button" id="copyManifestBtn" class="btn-secondary" style="padding:9px 14px; font-size:0.8rem;">📋 Copy Manifest URL</button>
+            <button type="button" id="openGeneratedInvoiceBtn" class="btn-secondary" style="padding:9px 14px; font-size:0.8rem;">🧾 Print White-Label Invoice</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="justify-content:center;" data-i18n="generateManifestBtn">Generate Cryptographic Manifest &amp; Record Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Module 2: Hidden Executive Business Analytics Control Room -->
+  <div class="modal-overlay" id="execModal">
+    <div class="modal-box wide">
+      <div class="modal-head">
+        <div>
+          <h3 style="font-size:1.28rem; font-weight:900;">🏛️ Executive Business Analytics Control Room</h3>
+          <p style="font-size:0.78rem; color:var(--text-secondary);">70-Lakh+ Sovereign Enterprise Telemetry • Real-Time Halal Profit &amp; Ledger Matrix</p>
+        </div>
+        <button type="button" class="close-x" data-close-modal="execModal">✕</button>
+      </div>
+
+      <!-- Auth Gate -->
+      <div id="execAuthGate" style="max-width:440px; margin:24px auto; text-align:center;">
+        <div style="font-size:2.4rem; margin-bottom:10px;">🔐</div>
+        <h4 style="font-size:1.1rem; font-weight:800; margin-bottom:6px;">Sovereign Master Key Required</h4>
+        <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:16px;">Enter executive authorization key (<code>OMNI-SOVEREIGN-2026</code>) to decrypt telemetry.</p>
+        <form id="execAuthForm" style="display:flex; gap:8px;">
+          <input type="password" id="execKeyInput" class="field-input" placeholder="OMNI-SOVEREIGN-2026" required />
+          <button type="submit" class="btn-primary">Unlock</button>
+        </form>
+        <p id="execAuthError" style="color:var(--danger); font-size:0.78rem; margin-top:8px; display:none;">Invalid Master Key. Access Denied.</p>
+      </div>
+
+      <!-- Unlocked Executive Workspace -->
+      <div id="execWorkspace" style="display:none;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:16px;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="btn-secondary" id="simTxBtn" style="padding:8px 14px; font-size:0.78rem;">⚡ Simulate Live Tx</button>
+            <button type="button" class="btn-secondary" id="toggleAutoSimBtn" style="padding:8px 14px; font-size:0.78rem;">▶ Auto-Stream: ON</button>
+          </div>
+          <button type="button" class="btn-primary" id="exportJsonBtn" style="padding:9px 16px; font-size:0.8rem;">⬇ Export Full Database (.json)</button>
+        </div>
+
+        <div class="exec-grid-kpi">
+          <div class="kpi-card">
+            <div class="hud-label">Gross Merchandise Volume</div>
+            <div class="hud-value teal tabular" id="kpiGmv">0</div>
+          </div>
+          <div class="kpi-card">
+            <div class="hud-label">Gross Halal Profit (0.1% + Direct)</div>
+            <div class="hud-value amber tabular" id="kpiProfit">0</div>
+          </div>
+          <div class="kpi-card">
+            <div class="hud-label">Active SaaS Subscriptions</div>
+            <div class="hud-value tabular" id="kpiSubs">0</div>
+          </div>
+          <div class="kpi-card">
+            <div class="hud-label">Verified Ledger Orders</div>
+            <div class="hud-value tabular" id="kpiOrders">0</div>
+          </div>
+        </div>
+
+        <div class="exec-charts-row">
+          <div class="chart-panel">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+              <strong style="font-size:0.9rem;">Gross Profit &amp; GMV Velocity (Live Canvas)</strong>
+              <span style="font-size:0.72rem; color:var(--accent-teal); font-family:var(--font-mono);">60fps Hardware Canvas</span>
+            </div>
+            <canvas id="revenueChartCanvas" width="600" height="210" style="width:100%; height:210px;"></canvas>
+          </div>
+
+          <div class="chart-panel">
+            <strong style="font-size:0.9rem; display:block; margin-bottom:10px;">Top Sellers Leaderboard</strong>
+            <div id="topSellersList" style="display:flex; flex-direction:column; gap:10px;"></div>
+          </div>
+        </div>
+
+        <div class="exec-lists-row">
+          <div class="chart-panel" style="max-height:290px; overflow-y:auto;">
+            <strong style="font-size:0.9rem; display:block; margin-bottom:10px;">Active Enterprise SaaS Logs</strong>
+            <table class="feed-table">
+              <thead>
+                <tr><th>Organization</th><th>Plan</th><th>MRR</th><th>Status</th></tr>
+              </thead>
+              <tbody id="subsLogBody"></tbody>
+            </table>
+          </div>
+
+          <div class="chart-panel" style="max-height:290px; overflow-y:auto;">
+            <strong style="font-size:0.9rem; display:block; margin-bottom:10px;">Live Transaction Feed</strong>
+            <table class="feed-table">
+              <thead>
+                <tr><th>Tracking ID</th><th>Client</th><th>Amount</th><th>Fee (0.1%)</th></tr>
+              </thead>
+              <tbody id="txFeedBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 3: Automated White-Label Invoice Engine -->
+  <div class="modal-overlay" id="invoiceModal">
+    <div class="modal-box wide" style="max-width:860px;">
+      <div class="modal-head no-print">
+        <h3 style="font-size:1.15rem; font-weight:800;">🧾 Automated White-Label Invoice Engine</h3>
+        <div style="display:flex; gap:8px;">
+          <button type="button" class="btn-primary" id="printInvoiceBtn" style="padding:8px 15px; font-size:0.82rem;">🖨️ Print / Save PDF</button>
+          <button type="button" class="close-x" data-close-modal="invoiceModal">✕</button>
+        </div>
+      </div>
+
+      <div class="invoice-sheet" id="invoiceSheet">
+        <div class="invoice-watermark">HALAL • ZERO RIBA</div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; border-bottom:2px solid #065f46; padding-bottom:16px;">
+          <div>
+            <div style="font-size:1.45rem; font-weight:900; color:#065f46; letter-spacing:-0.02em;">SovereignOmni.io</div>
+            <div style="font-size:0.78rem; color:#475569;">White-Label Sovereign Commerce &amp; SaaS Operating System</div>
+            <div style="font-size:0.75rem; color:#059669; font-weight:700; margin-top:4px;">✓ Sharia-Compliant • 0.1% Tech Fee • 0.00% Interest</div>
+          </div>
+          <div style="text-align:end;">
+            <div style="font-size:0.75rem; color:#64748b; text-transform:uppercase; font-weight:700;">Tracking &amp; Receipt ID</div>
+            <div id="invTrackingId" style="font-family:var(--font-mono); font-size:1.08rem; font-weight:900; color:#0f172a;">SOV-2026-000000</div>
+            <div id="invDate" style="font-size:0.78rem; color:#475569;"></div>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; font-size:0.84rem;">
+          <div>
+            <strong style="color:#475569; font-size:0.72rem; text-transform:uppercase;">Billed To</strong>
+            <div id="invClientName" style="font-weight:800; font-size:0.95rem;">Enterprise Partner</div>
+            <div id="invClientPhone" style="color:#475569;"></div>
+            <div id="invClientLoc" style="color:#475569;"></div>
+          </div>
+          <div style="text-align:end;">
+            <strong style="color:#475569; font-size:0.72rem; text-transform:uppercase;">Verification Hash</strong>
+            <div id="invHash" style="font-family:var(--font-mono); font-size:0.75rem; color:#065f46; word-break:break-all;"></div>
+            <div id="invCurrencyNote" style="font-size:0.76rem; color:#475569; margin-top:4px;"></div>
+          </div>
+        </div>
+
+        <table class="inv-table">
+          <thead>
+            <tr>
+              <th>Item / SaaS Tier</th>
+              <th>Option</th>
+              <th>Qty</th>
+              <th>Weight</th>
+              <th style="text-align:end;">Line Total</th>
+            </tr>
+          </thead>
+          <tbody id="invItemsBody"></tbody>
+        </table>
+
+        <div style="display:flex; justify-content:flex-end;">
+          <div style="width:min(320px, 100%); font-size:0.85rem; display:flex; flex-direction:column; gap:6px;">
+            <div style="display:flex; justify-content:space-between;"><span>Subtotal</span><strong id="invSub"></strong></div>
+            <div style="display:flex; justify-content:space-between; color:#b45309;"><span>0.1% Sovereign Tech Fee</span><strong id="invFee"></strong></div>
+            <div style="display:flex; justify-content:space-between;"><span>Compliance GST/VAT</span><strong id="invTax"></strong></div>
+            <div style="display:flex; justify-content:space-between;"><span>Logistics</span><strong id="invShip"></strong></div>
+            <div style="display:flex; justify-content:space-between; font-size:1.12rem; font-weight:900; color:#065f46; border-top:2px solid #065f46; padding-top:8px; margin-top:4px;">
+              <span>Total Paid / Due</span><span id="invTotal"></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px; padding-top:12px; border-top:1px dashed #cbd5e1; font-size:0.74rem; color:#64748b; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+          <span>Digitally Signed by SovereignOmni.io Automated Ledger</span>
+          <span>Zero Riba • Transparent Direct Settlement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toastEl"></div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      /* ==========================================================================
+         1. SOVEREIGN RAM REGISTERS, DICTIONARIES & CURRENCY MATRIX
+         ========================================================================== */
+      const STORAGE_KEYS = {
+        CART: "sovereign_omni_cart_v1",
+        REVIEWS: "sovereign_omni_reviews_v1",
+        TRANSACTIONS: "sovereign_omni_tx_v1",
+        PREFS: "sovereign_omni_prefs_v1"
+      };
+
+      const CURRENCIES = {
+        PKR: { code: "PKR", symbol: "Rs ", rate: 1, decimals: 0 },
+        USD: { code: "USD", symbol: "$", rate: 1 / 278.5, decimals: 2 },
+        SAR: { code: "SAR", symbol: "SAR ", rate: 3.75 / 278.5, decimals: 2 }
+      };
+
+      const I18N = {
+        en: {
+          brandTag: "Hyper-Scalable Halal OS",
+          execBtn: "Executive OS",
+          cartBtn: "Cart",
+          halalSeal: "0.1% Sovereign Tech Fee — 100% Halal, Direct & Transparent Partner Matrix — Zero Riba",
+          heroTitle1: "The World’s Largest",
+          heroTitle2: "Interest-Free Everything Marketplace",
+          heroTitle3: "& SaaS Operating System",
+          heroSubtitle: "Engineered on raw browser RAM registers and GPU-composited rendering pipelines for sub-millisecond global commerce, enterprise SaaS subscriptions, freelance orchestration, and pure organic trade.",
+          exploreBtn: "Explore Global Hyper-Grid",
+          sampleInvoiceBtn: "White-Label Invoice Demo",
+          hudLatency: "DOM / Filter Latency",
+          hudFee: "Sovereign Tech Fee",
+          hudSkus: "Active Global SKUs",
+          hudRiba: "Interest / Riba Ratio",
+          searchPlaceholder: "Instant 1ms Search across SaaS, Global Goods, Enterprise Talent & Pure Organics...",
+          pillarAll: "All Pillars (16)",
+          pillarGoods: "Global Consumer Goods",
+          pillarSaas: "Digital SaaS Solutions",
+          pillarServices: "Freelance / Enterprise Services",
+          pillarOrganic: "Natural / Organic Tiers",
+          catalogTitle: "Global Sovereign Marketplace",
+          catalogSub: "Zero-Riba transparent pricing with instant option matrix and real-time inventory registers.",
+          reviewsTitle: "Verified Sovereign Partner Matrix",
+          reviewsSub: "Real-time merchant & enterprise feedback stored in local cryptographic state.",
+          addReviewTitle: "Submit Partner Review",
+          revNamePh: "Your Name / Enterprise",
+          revRolePh: "Role / City (e.g. CTO, Lahore)",
+          revCommentPh: "Share your zero-riba commerce experience...",
+          submitReviewBtn: "Publish to Live Slider",
+          footerCopy: "100% Halal Interest-Free Global Commerce & SaaS OS.",
+          openControlRoom: "Open Control Room",
+          cartTitle: "Sovereign Order Matrix",
+          cartSub: "Reactive LocalStorage Engine",
+          sumSubtotal: "Subtotal",
+          sumTechFee: "0.1% Sovereign Tech Fee (Halal)",
+          sumTax: "Compliance GST / VAT (2.5%)",
+          sumShipping: "Logistics",
+          sumTotal: "Grand Total",
+          clearCartBtn: "Clear",
+          checkoutBtn: "Checkout & Manifest",
+          manifestTitle: "Cryptographic WhatsApp Manifest Hub",
+          manifestSub: "Encodes verified order matrix into instant WhatsApp API payload + White-Label Invoice",
+          generateManifestBtn: "Generate Cryptographic Manifest & Record Order",
+          addToCart: "Add to Matrix",
+          inStock: "In Stock",
+          lowStock: "Low Stock",
+          outStock: "Out of Stock",
+          digitalDelivery: "Instant Digital",
+          emptyCart: "Your Sovereign Order Matrix is empty. Add products or SaaS tiers to calculate live weights and fees."
+        },
+        ur: {
+          brandTag: "حلال ہائپر اسکیل ایبل آپریٹنگ سسٹم",
+          execBtn: "ایگزیکٹو روم",
+          cartBtn: "کارٹ",
+          halalSeal: "0.1% سوویرن ٹیک فیس — 100% حلال، شفاف پارٹنر میٹرکس — صفر سود",
+          heroTitle1: "دنیا کا سب سے بڑا",
+          heroTitle2: "بغیر سود ایوری تھنگ مارکیٹ پلیس",
+          heroTitle3: "اور ساس آپریٹنگ سسٹم",
+          heroSubtitle: "سب ملی سیکنڈ رفتار، خام براؤزر ریم رجسٹرز اور جی پی یو پائپ لائن پر مبنی عالمی تجارت، انٹرپرائز ساس، فری لانس سروسز اور خالص آرگینک مصنوعات کا مکمل نظام۔",
+          exploreBtn: "گلوبل ہائپر گرڈ دیکھیں",
+          sampleInvoiceBtn: "وائٹ لیبل انوائس ڈیمو",
+          hudLatency: "ایگزیکیوشن رفتار",
+          hudFee: "سوویرن ٹیک فیس",
+          hudSkus: "فعال عالمی مصنوعات",
+          hudRiba: "سود / ربا شرح",
+          searchPlaceholder: "ساس، مصنوعات، فری لانس سروسز اور آرگینک اشیاء میں 1ms فوری تلاش...",
+          pillarAll: "تمام شعبے (16)",
+          pillarGoods: "عالمی کنزیومر مصنوعات",
+          pillarSaas: "ڈیجیٹل ساس سلوشنز",
+          pillarServices: "فری لانس / انٹرپرائز سروسز",
+          pillarOrganic: "خالص / آرگینک درجات",
+          catalogTitle: "عالمی سوویرن مارکیٹ پلیس",
+          catalogSub: "صفر سود شفاف قیمتیں، فوری آپشن ٹوگلز اور لائیو اسٹاک رجسٹرز۔",
+          reviewsTitle: "تصدیق شدہ پارٹنر آراء",
+          reviewsSub: "مقامی کرپٹوگرافک اسٹیٹ میں محفوظ حقیقی تاجر اور انٹرپرائز ریویوز۔",
+          addReviewTitle: "اپنی رائے شامل کریں",
+          revNamePh: "آپ کا نام / کمپنی",
+          revRolePh: "عہدہ / شہر (مثلاً لاہور)",
+          revCommentPh: "بغیر سود تجارت کا اپنا تجربہ بیان کریں...",
+          submitReviewBtn: "لائیو سلائیڈر میں شائع کریں",
+          footerCopy: "100% حلال بغیر سود عالمی تجارت اور ساس سسٹم۔",
+          openControlRoom: "کنٹرول روم کھولیں",
+          cartTitle: "سوویرن آرڈر میٹرکس",
+          cartSub: "ری ایکٹو لوکل اسٹوریج انجن",
+          sumSubtotal: "ذیلی کل",
+          sumTechFee: "0.1% سوویرن ٹیک فیس (حلال)",
+          sumTax: "ٹیکس / جی ایس ٹی (2.5%)",
+          sumShipping: "لا جسٹکس",
+          sumTotal: "مجموعی کل",
+          clearCartBtn: "خالی کریں",
+          checkoutBtn: "چیک آؤٹ اور مینی فیسٹ",
+          manifestTitle: "کرپٹوگرافک واٹس ایپ مینی فیسٹ حب",
+          manifestSub: "تصدیق شدہ آرڈر کو فوری واٹس ایپ لنک اور وائٹ لیبل انوائس میں تبدیل کریں",
+          generateManifestBtn: "مینی فیسٹ بنائیں اور آرڈر محفوظ کریں",
+          addToCart: "کارٹ میں شامل کریں",
+          inStock: "دستیاب",
+          lowStock: "محدود اسٹاک",
+          outStock: "اسٹاک ختم",
+          digitalDelivery: "فوری ڈیجیٹل",
+          emptyCart: "آپ کا آرڈر میٹرکس خالی ہے۔ وزن اور فیس کے فوری حساب کے لیے اشیاء شامل کریں۔"
+        }
+      };
+
+      /* Inline Crisp SVG Generators (Zero external assets) */
+      const SVG_ICONS = {
+        chip: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1.9"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>`,
+        watch: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.9"><circle cx="12" cy="12" r="6"/><polyline points="12 9 12 12 14 13"/><path d="M16.5 17.5 15.5 22h-7l-1-4.5M7.5 6.5 8.5 2h7l1 4.5"/></svg>`,
+        solar: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.9"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`,
+        audio: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1.9"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>`,
+        cloud: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1.9"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
+        shield: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.9"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
+        erp: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.9"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>`,
+        bot: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1.9"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></svg>`,
+        code: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="1.9"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+        audit: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>`,
+        brand: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.9"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`,
+        leaf: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.9"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>`,
+        drop: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.9"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>`
+      };
+
+      /* Complete 16-Item Global Sovereign Database */
+      const CATALOG_DATA = [
+        {
+          id: "OMNI-G1", pillar: "goods", icon: "chip",
+          name: "Sovereign Edge AI Workstation M4", nameUr: "سوویرن ایج اے آئی ورک اسٹیشن M4",
+          desc: "Fanless neural compute station engineered for local zero-cloud enterprise inference.",
+          descUr: "بغیر کلاؤڈ تیز ترین مقامی اے آئی کمپیوٹنگ ورک اسٹیشن۔",
+          stock: 18, basePKR: 285000, weightKg: 2.4,
+          options: [
+            { label: "32GB / 1TB", mult: 1, weightAdd: 0 },
+            { label: "64GB / 2TB", mult: 1.38, weightAdd: 0.2 },
+            { label: "128GB / 4TB", mult: 1.85, weightAdd: 0.4 }
+          ]
+        },
+        {
+          id: "OMNI-G2", pillar: "goods", icon: "watch",
+          name: "Al-Mizan Titanium Chronometer", nameUr: "المیزان ٹائٹینیم اسمارٹ واچ",
+          desc: "Sapphire-glass precision timepiece with Qibla compass, biometric ECG, and 21-day solar cell.",
+          descUr: "نیلم گلاس، قبلہ کمپاس اور 21 دن سولر بیٹری والی ٹائٹینیم گھڑی۔",
+          stock: 42, basePKR: 48500, weightKg: 0.35,
+          options: [
+            { label: "42mm Obsidian", mult: 1, weightAdd: 0 },
+            { label: "46mm Emerald", mult: 1.15, weightAdd: 0.05 }
+          ]
+        },
+        {
+          id: "OMNI-G3", pillar: "goods", icon: "solar",
+          name: "Helios Sovereign 5kW Hybrid Inverter", nameUr: "ہیلیوس سوویرن 5 کلو واٹ سولر انورٹر",
+          desc: "Pure sine-wave LiFePO4 solar microgrid core with zero-export smart load balancing.",
+          descUr: "اسمارٹ لوڈ بیلنسنگ کے ساتھ خالص سائن ویو سولر انورٹر۔",
+          stock: 6, basePKR: 215000, weightKg: 14.5,
+          options: [
+            { label: "5kW Single", mult: 1, weightAdd: 0 },
+            { label: "10kW Dual", mult: 1.82, weightAdd: 8.5 }
+          ]
+        },
+        {
+          id: "OMNI-G4", pillar: "goods", icon: "audio",
+          name: "Qalam Acoustic ANC Studio Headphones", nameUr: "قلم اسٹوڈیو اے این سی ہیڈ فونز",
+          desc: "Lossless planar-magnetic drivers with 48dB active noise cancellation and titanium headband.",
+          descUr: "لاس لیس آڈیو اور 48 ڈی بی نوائز کینسلیشن ہیڈ فونز۔",
+          stock: 29, basePKR: 36000, weightKg: 0.65,
+          options: [
+            { label: "Studio Black", mult: 1, weightAdd: 0 },
+            { label: "Imperial Gold", mult: 1.12, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-S1", pillar: "saas", icon: "erp",
+          name: "OmniLedger Halal ERP Cloud", nameUr: "اومنی لیجر حلال ای آر پی کلاؤڈ",
+          desc: "Multi-branch Mudarabah & Murabaha compliant accounting, POS, inventory, and payroll OS.",
+          descUr: "مضاربہ اور مرابحہ کے مطابق مکمل کلاؤڈ اکاؤنٹنگ اور پے رول سسٹم۔",
+          stock: 999, basePKR: 24000, weightKg: 0,
+          options: [
+            { label: "Startup (1 Yr)", mult: 1, weightAdd: 0 },
+            { label: "Enterprise (1 Yr)", mult: 2.6, weightAdd: 0 },
+            { label: "Sovereign Lifetime", mult: 6.5, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-S2", pillar: "saas", icon: "cloud",
+          name: "VelocityCDN Edge Mesh Cluster", nameUr: "ویلاسٹی سی ڈی این ایج میش کلسٹر",
+          desc: "Sub-15ms global Anycast edge nodes spanning Karachi, Riyadh, Dubai, London, and Singapore.",
+          descUr: "کراچی، ریاض، دبئی اور لندن میں انتہائی تیز عالمی سی ڈی این نیٹ ورک۔",
+          stock: 999, basePKR: 18500, weightKg: 0,
+          options: [
+            { label: "10TB / mo", mult: 1, weightAdd: 0 },
+            { label: "100TB / mo", mult: 3.2, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-S3", pillar: "saas", icon: "shield",
+          name: "Aegis Zero-Trust SOC & WAF Suite", nameUr: "ایجس زیرو ٹرسٹ سیکیورٹی سوئٹ",
+          desc: "Automated DDoS mitigation, quantum-ready TLS rotation, and real-time compliance auditing.",
+          descUr: "خودکار ڈی ڈوس تحفظ اور ریئل ٹائم سائبر سیکیورٹی آڈٹ۔",
+          stock: 999, basePKR: 32000, weightKg: 0,
+          options: [
+            { label: "5 Domains", mult: 1, weightAdd: 0 },
+            { label: "Unlimited Cluster", mult: 2.9, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-S4", pillar: "saas", icon: "bot",
+          name: "Bayan Multilingual WhatsApp AI Agent", nameUr: "بیان اردو/انگلش واٹس ایپ اے آئی ایجنٹ",
+          desc: "24/7 Urdu, Arabic & English autonomous sales closer integrated directly with WhatsApp API.",
+          descUr: "اردو، عربی اور انگریزی میں خودکار واٹس ایپ سیلز ایجنٹ۔",
+          stock: 999, basePKR: 14500, weightKg: 0,
+          options: [
+            { label: "10k Conversations", mult: 1, weightAdd: 0 },
+            { label: "100k Enterprise", mult: 3.4, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-F1", pillar: "services", icon: "code",
+          name: "Full-Stack Sub-1ms SaaS Architecture", nameUr: "سب 1ms فل اسٹیک ساس آرکیٹیکچر",
+          desc: "Bespoke zero-bloat web operating system built by principal sovereign systems engineers.",
+          descUr: "ماہر سسٹم انجینئرز کے ذریعے تیار کردہ کسٹم ویب آپریٹنگ سسٹم۔",
+          stock: 4, basePKR: 450000, weightKg: 0,
+          options: [
+            { label: "Core MVP (2 Wks)", mult: 1, weightAdd: 0 },
+            { label: "60-Lakh Enterprise", mult: 2.4, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-F2", pillar: "services", icon: "audit",
+          name: "Sharia & FinTech Smart Audit", nameUr: "شریعہ اور فن ٹیک اسمارٹ آڈٹ",
+          desc: "End-to-end riba elimination review, contract certification, and transparent fee structuring.",
+          descUr: "سود سے پاک معاہدوں کی مکمل جانچ اور شریعہ تصدیق سروس۔",
+          stock: 9, basePKR: 95000, weightKg: 0,
+          options: [
+            { label: "Single Platform", mult: 1, weightAdd: 0 },
+            { label: "Holding Group", mult: 2.2, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-F3", pillar: "services", icon: "brand",
+          name: "Apple-Stripe Luxury UI/UX Overhaul", nameUr: "ایپل-اسٹرائپ لگزری یو آئی ڈیزائن",
+          desc: "Conversion-engineered glassmorphic product identity, micro-interactions, and design tokens.",
+          descUr: "جدید گلاس مورفک برانڈ شناخت اور ہائی کنورژن ڈیزائن سسٹم۔",
+          stock: 7, basePKR: 140000, weightKg: 0,
+          options: [
+            { label: "Web + Mobile", mult: 1, weightAdd: 0 },
+            { label: "Full Design OS", mult: 1.75, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-F4", pillar: "services", icon: "cloud",
+          name: "Zero-Downtime Cloud Migration Pod", nameUr: "زیرو ڈاؤن ٹائم کلاؤڈ مائیگریشن",
+          desc: "Dedicated DevOps squad migrating legacy monoliths to edge-replicated Kubernetes clusters.",
+          descUr: "بغیر کسی تعطل کے پرانے سسٹمز کی جدید کلاؤڈ منتقلی۔",
+          stock: 5, basePKR: 175000, weightKg: 0,
+          options: [
+            { label: "Standard Cluster", mult: 1, weightAdd: 0 },
+            { label: "Multi-Region HA", mult: 1.9, weightAdd: 0 }
+          ]
+        },
+        {
+          id: "OMNI-O1", pillar: "organic", icon: "drop",
+          name: "Royal Sidr Mountain Raw Honey", nameUr: "شاہی بیری کا خالص پہاڑی شہد",
+          desc: "Unheated, lab-certified single-origin Sidr nectar harvested from Swat & Hadhramaut valleys.",
+          descUr: "سوات اور حضرموت کی وادیوں سے حاصل کردہ لیب ٹیسٹڈ خالص بیری شہد۔",
+          stock: 34, basePKR: 6800, weightKg: 1.1,
+          options: [
+            { label: "1 kg Glass Jar", mult: 1, weightAdd: 0 },
+            { label: "3 kg Sovereign Crate", mult: 2.75, weightAdd: 2.2 }
+          ]
+        },
+        {
+          id: "OMNI-O2", pillar: "organic", icon: "leaf",
+          name: "Madinah Al-Munawwarah Ajwa Reserve", nameUr: "مدینہ منورہ ریزرو عجوہ کھجور",
+          desc: "Hand-selected Grade-AAA organic Ajwa dates, vacuum-sealed at harvest for peak freshness.",
+          descUr: "درجہ اول کی تازہ ویکیوم سیلڈ نامیاتی عجوہ کھجور۔",
+          stock: 52, basePKR: 5400, weightKg: 1.0,
+          options: [
+            { label: "1 kg Gift Box", mult: 1, weightAdd: 0 },
+            { label: "5 kg Family Pack", mult: 4.5, weightAdd: 4.0 }
+          ]
+        },
+        {
+          id: "OMNI-O3", pillar: "organic", icon: "drop",
+          name: "Cold-Pressed Extra Virgin Olive Elixir", nameUr: "کولڈ پریسڈ خالص زیتون کا تیل",
+          desc: "First-press polyphenol-rich organic olive oil bottled in UV-shielded emerald glass.",
+          descUr: "یو وی محفوظ ایمرالڈ بوتل میں بند خالص قدرتی زیتون کا تیل۔",
+          stock: 19, basePKR: 4900, weightKg: 1.2,
+          options: [
+            { label: "750 ml Bottle", mult: 1, weightAdd: 0 },
+            { label: "3L Tin Reserve", mult: 3.4, weightAdd: 2.4 }
+          ]
+        },
+        {
+          id: "OMNI-O4", pillar: "organic", icon: "leaf",
+          name: "Kashmiri Pure Mongra Saffron Reserve", nameUr: "خالص کشمیری مونگرا زعفران",
+          desc: "ISO-3632 Grade-A1 crimson stigmas with intense crocin aroma and zero synthetic dyes.",
+          descUr: "اعلیٰ معیار کا خالص کشمیری زعفران، مکمل قدرتی خوشبو کے ساتھ۔",
+          stock: 8, basePKR: 12500, weightKg: 0.15,
+          options: [
+            { label: "5 Grams Vial", mult: 1, weightAdd: 0 },
+            { label: "20 Grams Reserve", mult: 3.7, weightAdd: 0.1 }
+          ]
+        }
+      ];
+
+      const DEFAULT_REVIEWS = [
+        { id: "r1", name: "Tariq Al-Mansoor", role: "Managing Partner, Riyadh", rating: 5, comment: "SovereignOmni replaced three separate ERP and marketplace tools. Sub-1ms filtering and the 0.1% transparent Halal fee structure saved us millions in annual riba-free volume." },
+        { id: "r2", name: "Ayesha Siddiqui", role: "Founder, Lahore Organic Collective", rating: 5, comment: "The WhatsApp Cryptographic Manifest and automated white-label invoice print engine doubled our enterprise wholesale conversion rate overnight." },
+        { id: "r3", name: "Zainab & Bilal Tech", role: "SaaS Architects, Karachi", rating: 5, comment: "Zero bloat, instant Urdu/English flipping, and multi-currency SAR/USD/PKR conversion in under 1 millisecond. Truly a 70-Lakh+ grade digital asset." }
+      ];
+
+      const DEFAULT_SUBSCRIPTIONS = [
+        { org: "Al-Noor Logistics KSA", plan: "OmniLedger Sovereign", mrrPKR: 72000, status: "Active" },
+        { org: "Crescent BioFoods PK", plan: "Aegis WAF Cluster", mrrPKR: 48000, status: "Active" },
+        { org: "DeenPay FinTech", plan: "VelocityCDN 100TB", mrrPKR: 59200, status: "Active" },
+        { org: "Haramain Hospitality", plan: "Bayan AI Agent", mrrPKR: 49300, status: "Active" },
+        { org: "Indus Solar Grid", plan: "OmniLedger Enterprise", mrrPKR: 62400, status: "Active" }
+      ];
+
+      const DEFAULT_TRANSACTIONS = [
+        { id: "SOV-2026-841920", client: "Al-Futtaim Digital", amountPKR: 450000, feePKR: 450, itemId: "OMNI-F1", ts: Date.now() - 3600000 },
+        { id: "SOV-2026-841921", client: "Zainab Traders LHR", amountPKR: 285000, feePKR: 285, itemId: "OMNI-G1", ts: Date.now() - 2400000 },
+        { id: "SOV-2026-841922", client: "Riyadh Cloud Hub", amountPKR: 156000, feePKR: 156, itemId: "OMNI-S1", ts: Date.now() - 1500000 },
+        { id: "SOV-2026-841923", client: "Dar-ul-Shifa Organics", amountPKR: 54400, feePKR: 54.4, itemId: "OMNI-O1", ts: Date.now() - 600000 },
+        { id: "SOV-2026-841924", client: "Atlas Microgrid", amountPKR: 391300, feePKR: 391.3, itemId: "OMNI-G3", ts: Date.now() - 120000 }
+      ];
+
+      /* ==========================================================================
+         2. STATE REGISTERS & LOCALSTORAGE PERSISTENCE
+         ========================================================================== */
+      const readJSON = (key, fallback) => {
+        try {
+          const raw = localStorage.getItem(key);
+          return raw ? JSON.parse(raw) : fallback;
+        } catch {
+          return fallback;
+        }
+      };
+
+      const writeJSON = (key, value) => {
+        try { localStorage.setItem(key, JSON.stringify(value)); } catch {}
+      };
+
+      const prefs = readJSON(STORAGE_KEYS.PREFS, { lang: "en", currency: "PKR", theme: "dark" });
+
+      const STATE = {
+        lang: prefs.lang || "en",
+        currency: prefs.currency || "PKR",
+        theme: prefs.theme || "dark",
+        activePillar: "all",
+        searchQuery: "",
+        selectedOptions: Object.fromEntries(CATALOG_DATA.map(item => [item.id, 0])),
+        cart: readJSON(STORAGE_KEYS.CART, []),
+        reviews: readJSON(STORAGE_KEYS.REVIEWS, DEFAULT_REVIEWS),
+        transactions: readJSON(STORAGE_KEYS.TRANSACTIONS, DEFAULT_TRANSACTIONS),
+        subscriptions: DEFAULT_SUBSCRIPTIONS,
+        slideIndex: 0,
+        execUnlocked: false,
+        autoSim: true,
+        lastInvoice: null,
+        lastManifestUrl: ""
+      };
+
+      /* Pre-compiled Search Index Register for O(1)/Sub-1ms Filtering */
+      const SEARCH_INDEX = CATALOG_DATA.map(item => ({
+        id: item.id,
+        pillar: item.pillar,
+        haystack: `${item.name} ${item.nameUr} ${item.desc} ${item.descUr} ${item.pillar} ${item.id} ${item.options.map(o => o.label).join(" ")}`.toLowerCase()
+      }));
+
+      /* ==========================================================================
+         3. DOM CACHE & LATENCY TELEMETRY ENGINE
+         ========================================================================== */
+      const $ = id => document.getElementById(id);
+      const DOM = {
+        latencyReadout: $("latencyReadout"),
+        hudLatencyVal: $("hudLatencyVal"),
+        currencyCapsule: $("currencyCapsule"),
+        langToggleBtn: $("langToggleBtn"),
+        themeToggleBtn: $("themeToggleBtn"),
+        themeIcon: $("themeIcon"),
+        predictiveSearch: $("predictiveSearch"),
+        searchMatchBadge: $("searchMatchBadge"),
+        pillarTabs: $("pillarTabs"),
+        catalogGrid: $("catalogGrid"),
+        cartCountBadge: $("cartCountBadge"),
+        cartDrawer: $("cartDrawer"),
+        cartBackdrop: $("cartBackdrop"),
+        cartItems: $("cartItems"),
+        sumSubtotal: $("sumSubtotal"),
+        sumTechFee: $("sumTechFee"),
+        sumTax: $("sumTax"),
+        sumWeight: $("sumWeight"),
+        sumShipping: $("sumShipping"),
+        sumTotal: $("sumTotal"),
+        testimonialTrack: $("testimonialTrack"),
+        sliderDots: $("sliderDots"),
+        avgRatingPill: $("avgRatingPill"),
+        toastEl: $("toastEl")
+      };
+
+      const recordLatency = (startTime) => {
+        const elapsed = Math.max(0.04, performance.now() - startTime);
+        const text = `${elapsed.toFixed(2)} ms`;
+        DOM.latencyReadout.textContent = text;
+        DOM.hudLatencyVal.textContent = text;
+        return text;
+      };
+
+      let toastTimer = null;
+      const showToast = (msg) => {
+        DOM.toastEl.textContent = msg;
+        DOM.toastEl.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => DOM.toastEl.classList.remove("show"), 2600);
+      };
+
+      const formatMoney = (pkrAmount) => {
+        const cfg = CURRENCIES[STATE.currency];
+        const converted = pkrAmount * cfg.rate;
+        return `${cfg.symbol}${converted.toLocaleString(undefined, {
+          minimumFractionDigits: cfg.decimals,
+          maximumFractionDigits: cfg.decimals
+        })}`;
+      };
+
+      const getOptionData = (item) => {
+        const idx = STATE.selectedOptions[item.id] || 0;
+        const opt = item.options[idx] || item.options[0];
+        return {
+          idx,
+          label: opt.label,
+          pricePKR: Math.round(item.basePKR * opt.mult),
+          weightKg: Number((item.weightKg + opt.weightAdd).toFixed(2))
+        };
+      };
+
+      const cryptoHash = (str) => {
+        let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+        for (let i = 0; i < str.length; i++) {
+          const ch = str.charCodeAt(i);
+          h1 = Math.imul(h1 ^ ch, 2654435761);
+          h2 = Math.imul(h2 ^ ch, 1597334677);
+        }
+        h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+        h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+        return `0x${(h2 >>> 0).toString(16).padStart(8, "0")}${(h1 >>> 0).toString(16).padStart(8, "0")}`.toUpperCase();
+      };
+
+      /* ==========================================================================
+         4. 1ms TRANSLATION SHIELD & THEME ENGINE
+         ========================================================================== */
+      const applyTranslations = () => {
+        const t0 = performance.now();
+        const dict = I18N[STATE.lang];
+        document.documentElement.lang = STATE.lang;
+        document.documentElement.dir = STATE.lang === "ur" ? "rtl" : "ltr";
+
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) el.textContent = dict[key];
+        });
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+          const key = el.getAttribute("data-i18n-placeholder");
+          if (dict[key]) el.setAttribute("placeholder", dict[key]);
+        });
+
+        $("langLabel").textContent = STATE.lang === "en" ? "اردو / EN" : "EN / اردو";
+        renderCatalog();
+        renderCart();
+        recordLatency(t0);
+      };
+
+      const applyTheme = () => {
+        document.documentElement.setAttribute("data-theme", STATE.theme);
+        DOM.themeIcon.textContent = STATE.theme === "dark" ? "☀️" : "🌙";
+        if (STATE.execUnlocked) renderExecutiveDashboard();
+      };
+
+      /* ==========================================================================
+         5. HYPER-GRID MARKETPLACE & 1ms PREDICTIVE FILTER
+         ========================================================================== */
+      const renderCatalog = () => {
+        const t0 = performance.now();
+        const q = STATE.searchQuery.trim().toLowerCase();
+        const pillar = STATE.activePillar;
+        const dict = I18N[STATE.lang];
+        const isUr = STATE.lang === "ur";
+
+        const matchedIds = new Set();
+        for (let i = 0; i < SEARCH_INDEX.length; i++) {
+          const entry = SEARCH_INDEX[i];
+          if (pillar !== "all" && entry.pillar !== pillar) continue;
+          if (q && !entry.haystack.includes(q)) continue;
+          matchedIds.add(entry.id);
+        }
+
+        let html = "";
+        for (let i = 0; i < CATALOG_DATA.length; i++) {
+          const item = CATALOG_DATA[i];
+          if (!matchedIds.has(item.id)) continue;
+
+          const opt = getOptionData(item);
+          const feePKR = opt.pricePKR * 0.001;
+          const stockClass = item.stock === 0 ? "out" : item.stock <= 8 ? "low" : "";
+          const stockText = item.stock === 0
+            ? dict.outStock
+            : item.stock <= 8
+              ? `${dict.lowStock} (${item.stock})`
+              : item.stock >= 900
+                ? dict.digitalDelivery
+                : `${dict.inStock} (${item.stock})`;
+
+          const optionsHtml = item.options.map((o, idx) =>
+            `<button type="button" class="option-pill ${idx === opt.idx ? "selected" : ""}" data-action="select-opt" data-id="${item.id}" data-opt="${idx}">${o.label}</button>`
+          ).join("");
+
+          html += `
+            <article class="product-card glass" data-id="${item.id}">
+              <div class="card-top">
+                <div class="card-svg-box">${SVG_ICONS[item.icon] || SVG_ICONS.chip}</div>
+                <div class="card-badges">
+                  <span class="pill-tag">${item.pillar.toUpperCase()}</span>
+                  <span class="stock-tag ${stockClass}">${stockText}</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="card-title">${isUr ? item.nameUr : item.name}</h3>
+                <p class="card-desc">${isUr ? item.descUr : item.desc}</p>
+              </div>
+              <div class="option-row">${optionsHtml}</div>
+              <div class="card-meta-line">
+                <span>SKU: ${item.id}</span>
+                <span>${opt.weightKg > 0 ? `${opt.weightKg} kg` : "0.00 kg • Cloud"}</span>
+              </div>
+              <div class="card-footer">
+                <div class="price-block">
+                  <div class="price-main tabular">${formatMoney(opt.pricePKR)}</div>
+                  <div class="price-fee tabular">+0.1% Fee: ${formatMoney(feePKR)}</div>
+                </div>
+                <button type="button" class="add-cart-btn" data-action="add-cart" data-id="${item.id}" ${item.stock === 0 ? "disabled" : ""}>
+                  <span>+</span>
+                  <span>${dict.addToCart}</span>
+                </button>
+              </div>
+            </article>
+          `;
+        }
+
+        if (!html) {
+          html = `
+            <div class="empty-state glass">
+              <h3 style="margin-bottom:6px;">No Sovereign Assets Matched "${STATE.searchQuery}"</h3>
+              <p style="color:var(--text-secondary); font-size:0.86rem;">Clear your search query or switch pillars to explore all 16 global offerings.</p>
+            </div>
+          `;
+        }
+
+        DOM.catalogGrid.innerHTML = html;
+        const ms = recordLatency(t0);
+        DOM.searchMatchBadge.textContent = `${matchedIds.size} / ${CATALOG_DATA.length} • ${ms}`;
+      };
+
+      /* ==========================================================================
+         6. HIGH-PERFORMANCE CART & SHIPPING ENGINE
+         ========================================================================== */
+      const computeCartTotals = () => {
+        let subtotalPKR = 0;
+        let totalWeight = 0;
+        let totalQty = 0;
+
+        for (let i = 0; i < STATE.cart.length; i++) {
+          const line = STATE.cart[i];
+          subtotalPKR += line.unitPKR * line.qty;
+          totalWeight += line.weightKg * line.qty;
+          totalQty += line.qty;
+        }
+
+        const techFeePKR = subtotalPKR * 0.001; // 0.1% Sovereign Halal Tech Fee
+        const taxPKR = subtotalPKR * 0.025;     // 2.5% Compliance GST/VAT
+        // Weight-based shipping: digital items (0 kg) ship free; physical orders: base 450 PKR + 280 PKR/kg (free over 250,000 PKR)
+        const shippingPKR = totalWeight <= 0
+          ? 0
+          : subtotalPKR >= 250000
+            ? 0
+            : Math.round(450 + totalWeight * 280);
+        const grandTotalPKR = subtotalPKR + techFeePKR + taxPKR + shippingPKR;
+
+        return { subtotalPKR, techFeePKR, taxPKR, shippingPKR, grandTotalPKR, totalWeight, totalQty };
+      };
+
+      const renderCart = () => {
+        const totals = computeCartTotals();
+        DOM.cartCountBadge.textContent = totals.totalQty;
+
+        if (STATE.cart.length === 0) {
+          DOM.cartItems.innerHTML = `<div style="text-align:center; padding:40px 14px; color:var(--text-secondary); font-size:0.86rem;">${I18N[STATE.lang].emptyCart}</div>`;
+        } else {
+          DOM.cartItems.innerHTML = STATE.cart.map((line, idx) => `
+            <div class="cart-item">
+              <div style="min-width:0;">
+                <div style="font-weight:800; font-size:0.88rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${STATE.lang === "ur" ? line.nameUr : line.name}</div>
+                <div style="font-size:0.74rem; color:var(--text-secondary);">${line.optionLabel} • ${(line.weightKg * line.qty).toFixed(2)} kg</div>
+                <div style="font-size:0.82rem; font-weight:800; color:var(--accent-teal); margin-top:3px;" class="tabular">${formatMoney(line.unitPKR * line.qty)}</div>
+              </div>
+              <div class="qty-controls">
+                <button type="button" class="qty-btn" data-cart-op="dec" data-idx="${idx}">−</button>
+                <span class="tabular" style="font-size:0.8rem; font-weight:800; min-width:18px; text-align:center;">${line.qty}</span>
+                <button type="button" class="qty-btn" data-cart-op="inc" data-idx="${idx}">+</button>
+                <button type="button" class="qty-btn" data-cart-op="del" data-idx="${idx}" style="color:var(--danger);">✕</button>
+              </div>
+            </div>
+          `).join("");
+        }
+
+        DOM.sumSubtotal.textContent = formatMoney(totals.subtotalPKR);
+        DOM.sumTechFee.textContent = formatMoney(totals.techFeePKR);
+        DOM.sumTax.textContent = formatMoney(totals.taxPKR);
+        DOM.sumWeight.textContent = `${totals.totalWeight.toFixed(2)} kg`;
+        DOM.sumShipping.textContent = totals.shippingPKR === 0 && totals.totalWeight > 0 ? "FREE" : formatMoney(totals.shippingPKR);
+        DOM.sumTotal.textContent = formatMoney(totals.grandTotalPKR);
+
+        writeJSON(STORAGE_KEYS.CART, STATE.cart);
+      };
+
+      const addToCart = (itemId) => {
+        const t0 = performance.now();
+        const item = CATALOG_DATA.find(x => x.id === itemId);
+        if (!item || item.stock <= 0) return;
+
+        const opt = getOptionData(item);
+        const existing = STATE.cart.find(c => c.id === item.id && c.optionLabel === opt.label);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          STATE.cart.push({
+            id: item.id,
+            name: item.name,
+            nameUr: item.nameUr,
+            optionLabel: opt.label,
+            unitPKR: opt.pricePKR,
+            weightKg: opt.weightKg,
+            qty: 1
+          });
+        }
+        renderCart();
+        recordLatency(t0);
+        showToast(`✓ Added ${item.name} (${opt.label}) to Matrix`);
+      };
+
+      const toggleDrawer = (open) => {
+        DOM.cartDrawer.classList.toggle("open", open);
+        DOM.cartBackdrop.classList.toggle("open", open);
+      };
+
+      /* ==========================================================================
+         7. MODULE 1 & 3: WHATSAPP MANIFEST HUB + WHITE-LABEL INVOICE ENGINE
+         ========================================================================== */
+      const generateTrackingId = () => `SOV-2026-${Math.floor(100000 + Math.random() * 900000)}`;
+
+      const openInvoiceModal = (invoiceData) => {
+        const d = invoiceData;
+        $("invTrackingId").textContent = d.trackingId;
+        $("invDate").textContent = new Date(d.ts).toLocaleString();
+        $("invClientName").textContent = d.clientName;
+        $("invClientPhone").textContent = d.clientPhone;
+        $("invClientLoc").textContent = d.clientLoc;
+        $("invHash").textContent = d.hash;
+        $("invCurrencyNote").textContent = `Display Currency: ${STATE.currency} (Zero-Riba Direct Settlement)`;
+
+        $("invItemsBody").innerHTML = d.items.map(line => `
+          <tr>
+            <td><strong>${line.name}</strong></td>
+            <td>${line.optionLabel}</td>
+            <td class="tabular">${line.qty}</td>
+            <td class="tabular">${(line.weightKg * line.qty).toFixed(2)} kg</td>
+            <td class="tabular" style="text-align:end; font-weight:700;">${formatMoney(line.unitPKR * line.qty)}</td>
+          </tr>
+        `).join("");
+
+        $("invSub").textContent = formatMoney(d.totals.subtotalPKR);
+        $("invFee").textContent = formatMoney(d.totals.techFeePKR);
+        $("invTax").textContent = formatMoney(d.totals.taxPKR);
+        $("invShip").textContent = formatMoney(d.totals.shippingPKR);
+        $("invTotal").textContent = formatMoney(d.totals.grandTotalPKR);
+
+        $("invoiceModal").classList.add("open");
+      };
+
+      /* ==========================================================================
+         8. MODULE 2: EXECUTIVE ANALYTICS CONTROL ROOM (CANVAS + LEDGER + EXPORT)
+         ========================================================================== */
+      const renderRevenueCanvas = () => {
+        const canvas = $("revenueChartCanvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const dpr = window.devicePixelRatio || 1;
+        const rectW = canvas.clientWidth || 560;
+        const rectH = 210;
+        canvas.width = rectW * dpr;
+        canvas.height = rectH * dpr;
+        ctx.scale(dpr, dpr);
+
+        ctx.clearRect(0, 0, rectW, rectH);
+
+        const recent = STATE.transactions.slice(-10);
+        const maxVal = Math.max(100000, ...recent.map(t => t.amountPKR));
+        const padL = 16, padR = 16, padT = 18, padB = 28;
+        const chartW = rectW - padL - padR;
+        const chartH = rectH - padT - padB;
+        const barW = Math.max(16, (chartW / recent.length) * 0.56);
+        const step = chartW / Math.max(1, recent.length);
+
+        // Subtle Grid Lines
+        ctx.strokeStyle = STATE.theme === "dark" ? "rgba(255,255,255,0.08)" : "rgba(4,47,46,0.1)";
+        ctx.lineWidth = 1;
+        for (let g = 0; g <= 3; g++) {
+          const y = padT + (chartH / 3) * g;
+          ctx.beginPath();
+          ctx.moveTo(padL, y);
+          ctx.lineTo(rectW - padR, y);
+          ctx.stroke();
+        }
+
+        // Bars + Trend Line
+        const pts = [];
+        recent.forEach((tx, idx) => {
+          const xCenter = padL + step * idx + step / 2;
+          const h = (tx.amountPKR / maxVal) * chartH;
+          const y = padT + chartH - h;
+          pts.push({ x: xCenter, y });
+
+          const grad = ctx.createLinearGradient(0, y, 0, padT + chartH);
+          grad.addColorStop(0, "#14b8a6");
+          grad.addColorStop(1, "rgba(16, 185, 129, 0.18)");
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.roundRect ? ctx.roundRect(xCenter - barW / 2, y, barW, h, 6) : ctx.rect(xCenter - barW / 2, y, barW, h);
+          ctx.fill();
+
+          ctx.fillStyle = STATE.theme === "dark" ? "#94a3b8" : "#335c56";
+          ctx.font = "600 10px monospace";
+          ctx.textAlign = "center";
+          ctx.fillText(tx.id.slice(-4), xCenter, rectH - 8);
+        });
+
+        // Amber Profit Velocity Overlay Line
+        if (pts.length > 1) {
+          ctx.strokeStyle = "#f59e0b";
+          ctx.lineWidth = 2.2;
+          ctx.beginPath();
+          pts.forEach((p, i) => (i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y)));
+          ctx.stroke();
+
+          pts.forEach(p => {
+            ctx.fillStyle = "#f59e0b";
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 3.5, 0, Math.PI * 2);
+            ctx.fill();
+          });
+        }
+      };
+
+      const renderExecutiveDashboard = () => {
+        if (!STATE.execUnlocked) return;
+
+        const gmvPKR = STATE.transactions.reduce((acc, t) => acc + t.amountPKR, 0);
+        const feeProfitPKR = STATE.transactions.reduce((acc, t) => acc + t.feePKR, 0);
+        const subMrrPKR = STATE.subscriptions.reduce((acc, s) => acc + s.mrrPKR, 0);
+        const grossProfitPKR = feeProfitPKR + subMrrPKR + gmvPKR * 0.14;
+
+        $("kpiGmv").textContent = formatMoney(gmvPKR);
+        $("kpiProfit").textContent = formatMoney(grossProfitPKR);
+        $("kpiSubs").textContent = `${STATE.subscriptions.length} Enterprise`;
+        $("kpiOrders").textContent = STATE.transactions.length;
+
+        // Top Sellers Calculation
+        const sellerTotals = {};
+        STATE.transactions.forEach(t => {
+          sellerTotals[t.itemId] = (sellerTotals[t.itemId] || 0) + t.amountPKR;
+        });
+        const sortedSellers = Object.entries(sellerTotals)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 4);
+
+        $("topSellersList").innerHTML = sortedSellers.map(([itemId, amt]) => {
+          const prod = CATALOG_DATA.find(c => c.id === itemId);
+          const pct = Math.min(100, Math.round((amt / Math.max(1, gmvPKR)) * 100));
+          return `
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.78rem; margin-bottom:4px;">
+                <strong>${prod ? prod.name : itemId}</strong>
+                <span class="tabular" style="color:var(--accent-teal);">${formatMoney(amt)}</span>
+              </div>
+              <div style="height:7px; border-radius:999px; background:rgba(255,255,255,0.08); overflow:hidden;">
+                <div style="width:${pct}%; height:100%; background:linear-gradient(90deg, #14b8a6, #f59e0b);"></div>
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        $("subsLogBody").innerHTML = STATE.subscriptions.map(s => `
+          <tr>
+            <td><strong>${s.org}</strong></td>
+            <td>${s.plan}</td>
+            <td class="tabular">${formatMoney(s.mrrPKR)}</td>
+            <td><span style="color:var(--accent-emerald); font-weight:700;">● ${s.status}</span></td>
+          </tr>
+        `).join("");
+
+        $("txFeedBody").innerHTML = [...STATE.transactions].reverse().slice(0, 12).map(t => `
+          <tr>
+            <td style="font-family:var(--font-mono); color:var(--accent-teal);">${t.id}</td>
+            <td>${t.client}</td>
+            <td class="tabular">${formatMoney(t.amountPKR)}</td>
+            <td class="tabular" style="color:var(--accent-amber);">${formatMoney(t.feePKR)}</td>
+          </tr>
+        `).join("");
+
+        requestAnimationFrame(renderRevenueCanvas);
+      };
+
+      const simulateLiveTransaction = () => {
+        const sampleClients = ["Al-Barakah Holdings", "Mecca Tech Ventures", "Lahore Cloud Co.", "SilkRoad Exports", "Medina Organics", "Karachi Port SaaS"];
+        const randItem = CATALOG_DATA[Math.floor(Math.random() * CATALOG_DATA.length)];
+        const mult = 1 + Math.floor(Math.random() * 2);
+        const amt = randItem.basePKR * mult;
+        const tx = {
+          id: generateTrackingId(),
+          client: sampleClients[Math.floor(Math.random() * sampleClients.length)],
+          amountPKR: amt,
+          feePKR: Number((amt * 0.001).toFixed(2)),
+          itemId: randItem.id,
+          ts: Date.now()
+        };
+        STATE.transactions.push(tx);
+        if (STATE.transactions.length > 40) STATE.transactions.shift();
+        writeJSON(STORAGE_KEYS.TRANSACTIONS, STATE.transactions);
+        if (STATE.execUnlocked) renderExecutiveDashboard();
+      };
+
+      /* ==========================================================================
+         9. MODULE 4: LIVE TESTIMONIAL SLIDER ENGINE
+         ========================================================================== */
+      const renderTestimonials = () => {
+        const reviews = STATE.reviews;
+        if (STATE.slideIndex >= reviews.length) STATE.slideIndex = 0;
+        if (STATE.slideIndex < 0) STATE.slideIndex = reviews.length - 1;
+
+        DOM.testimonialTrack.innerHTML = reviews.map(r => `
+          <div class="slide-item">
+            <div class="stars-row">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</div>
+            <p class="slide-quote">“${r.comment}”</p>
+            <div class="slide-author">
+              <div class="author-meta">
+                <strong>${r.name}</strong>
+                <span>${r.role}</span>
+              </div>
+              <span class="pill-tag">Verified Partner</span>
+            </div>
+          </div>
+        `).join("");
+
+        DOM.sliderDots.innerHTML = reviews.map((_, idx) =>
+          `<button type="button" class="dot-btn ${idx === STATE.slideIndex ? "active" : ""}" data-slide="${idx}" aria-label="Slide ${idx + 1}"></button>`
+        ).join("");
+
+        const offset = STATE.lang === "ur" ? STATE.slideIndex * 100 : -STATE.slideIndex * 100;
+        DOM.testimonialTrack.style.transform = `translate3d(${offset}%, 0, 0)`;
+
+        const avg = reviews.reduce((a, b) => a + Number(b.rating), 0) / Math.max(1, reviews.length);
+        DOM.avgRatingPill.textContent = `★ ${avg.toFixed(1)} / 5.0 (${reviews.length})`;
+      };
+
+      /* ==========================================================================
+         10. EVENT DELEGATION & INTERACTION WIRING
+         ========================================================================== */
+      const bindEvents = () => {
+        // Predictive Search (1ms Instant Execution)
+        DOM.predictiveSearch.addEventListener("input", (e) => {
+          STATE.searchQuery = e.target.value;
+          renderCatalog();
+        });
+
+        // Pillar Filter Tabs (Event Delegation)
+        DOM.pillarTabs.addEventListener("click", (e) => {
+          const btn = e.target.closest(".pillar-tab");
+          if (!btn) return;
+          DOM.pillarTabs.querySelectorAll(".pillar-tab").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          STATE.activePillar = btn.getAttribute("data-pillar");
+          renderCatalog();
+        });
+
+        // Catalog Grid Delegation (Option Select & Add to Cart)
+        DOM.catalogGrid.addEventListener("click", (e) => {
+          const optBtn = e.target.closest('[data-action="select-opt"]');
+          if (optBtn) {
+            const t0 = performance.now();
+            const id = optBtn.getAttribute("data-id");
+            const optIdx = Number(optBtn.getAttribute("data-opt"));
+            STATE.selectedOptions[id] = optIdx;
+            renderCatalog();
+            recordLatency(t0);
+            return;
+          }
+
+          const addBtn = e.target.closest('[data-action="add-cart"]');
+          if (addBtn) {
+            addToCart(addBtn.getAttribute("data-id"));
+          }
+        });
+
+        // Currency Matrix Capsule
+        DOM.currencyCapsule.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-currency]");
+          if (!btn) return;
+          const t0 = performance.now();
+          STATE.currency = btn.getAttribute("data-currency");
+          DOM.currencyCapsule.querySelectorAll(".capsule-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          writeJSON(STORAGE_KEYS.PREFS, { lang: STATE.lang, currency: STATE.currency, theme: STATE.theme });
+          renderCatalog();
+          renderCart();
+          if (STATE.execUnlocked) renderExecutiveDashboard();
+          if (STATE.lastInvoice) openInvoiceModalIfVisible();
+          recordLatency(t0);
+        });
+
+        const openInvoiceModalIfVisible = () => {
+          if ($("invoiceModal").classList.contains("open") && STATE.lastInvoice) {
+            openInvoiceModal(STATE.lastInvoice);
+          }
+        };
+
+        // 1ms Language Shield Toggle
+        DOM.langToggleBtn.addEventListener("click", () => {
+          STATE.lang = STATE.lang === "en" ? "ur" : "en";
+          writeJSON(STORAGE_KEYS.PREFS, { lang: STATE.lang, currency: STATE.currency, theme: STATE.theme });
+          applyTranslations();
+          renderTestimonials();
+        });
+
+        // Zero-Latency Theme Toggle
+        DOM.themeToggleBtn.addEventListener("click", () => {
+          const t0 = performance.now();
+          STATE.theme = STATE.theme === "dark" ? "light" : "dark";
+          writeJSON(STORAGE_KEYS.PREFS, { lang: STATE.lang, currency: STATE.currency, theme: STATE.theme });
+          applyTheme();
+          recordLatency(t0);
+        });
+
+        // Cart Drawer Controls
+        $("openCartBtn").addEventListener("click", () => toggleDrawer(true));
+        $("closeCartBtn").addEventListener("click", () => toggleDrawer(false));
+        DOM.cartBackdrop.addEventListener("click", () => toggleDrawer(false));
+
+        DOM.cartItems.addEventListener("click", (e) => {
+          const btn = e.target.closest("[data-cart-op]");
+          if (!btn) return;
+          const op = btn.getAttribute("data-cart-op");
+          const idx = Number(btn.getAttribute("data-idx"));
+          if (op === "inc") STATE.cart[idx].qty += 1;
+          if (op === "dec") {
+            STATE.cart[idx].qty -= 1;
+            if (STATE.cart[idx].qty <= 0) STATE.cart.splice(idx, 1);
+          }
+          if (op === "del") STATE.cart.splice(idx, 1);
+          renderCart();
+        });
+
+        $("clearCartBtn").addEventListener("click", () => {
+          STATE.cart = [];
+          renderCart();
+          showToast("Cart Matrix cleared.");
+        });
+
+        $("proceedCheckoutBtn").addEventListener("click", () => {
+          if (STATE.cart.length === 0) {
+            showToast("Add at least one item before generating a manifest.");
+            return;
+          }
+          toggleDrawer(false);
+          $("manifestPreviewBox").style.display = "none";
+          $("checkoutModal").classList.add("open");
+        });
+
+        // Module 1: Cryptographic WhatsApp Manifest Checkout Form
+        $("checkoutForm").addEventListener("submit", (e) => {
+          e.preventDefault();
+          const clientName = $("chkName").value.trim();
+          const clientPhone = $("chkPhone").value.trim();
+          const clientLoc = $("chkLocation").value.trim();
+          const merchantWa = $("chkMerchantWa").value.replace(/\D/g, "") || "923000002026";
+          const totals = computeCartTotals();
+          const trackingId = generateTrackingId();
+          const ts = Date.now();
+          const payloadString = `${trackingId}|${clientName}|${clientPhone}|${totals.grandTotalPKR}|${ts}`;
+          const hash = cryptoHash(payloadString);
+
+          const linesText = STATE.cart.map(c =>
+            `• ${c.name} (${c.optionLabel}) x${c.qty} = ${formatMoney(c.unitPKR * c.qty)}`
+          ).join("\n");
+
+          const message = [
+            `*SOVEREIGNOMNI.IO — CRYPTOGRAPHIC ORDER MANIFEST*`,
+            `Tracking ID: ${trackingId}`,
+            `Hash: ${hash}`,
+            `Client: ${clientName} (${clientPhone})`,
+            `Location: ${clientLoc}`,
+            `--- ORDER MATRIX ---`,
+            linesText,
+            `--- ZERO-RIBA BREAKDOWN ---`,
+            `Subtotal: ${formatMoney(totals.subtotalPKR)}`,
+            `0.1% Sovereign Tech Fee: ${formatMoney(totals.techFeePKR)}`,
+            `Compliance Tax (2.5%): ${formatMoney(totals.taxPKR)}`,
+            `Logistics (${totals.totalWeight.toFixed(2)} kg): ${formatMoney(totals.shippingPKR)}`,
+            `*GRAND TOTAL: ${formatMoney(totals.grandTotalPKR)}*`,
+            `Verified 100% Halal • Zero Riba`
+          ].join("\n");
+
+          const waUrl = `https://wa.me/${merchantWa}?text=${encodeURIComponent(message)}`;
+          STATE.lastManifestUrl = waUrl;
+
+          $("manifestHashText").textContent = `Tracking: ${trackingId} | Hash: ${hash} | API URL Ready (${waUrl.length} chars)`;
+          $("waLaunchLink").href = waUrl;
+          $("manifestPreviewBox").style.display = "block";
+
+          // Save Snapshot for Invoice Engine
+          STATE.lastInvoice = {
+            trackingId,
+            ts,
+            clientName,
+            clientPhone,
+            clientLoc,
+            hash,
+            items: JSON.parse(JSON.stringify(STATE.cart)),
+            totals
+          };
+
+          // Record into Executive Transaction Ledger
+          const primaryItem = STATE.cart[0] ? STATE.cart[0].id : "OMNI-G1";
+          STATE.transactions.push({
+            id: trackingId,
+            client: clientName,
+            amountPKR: Math.round(totals.grandTotalPKR),
+            feePKR: Number(totals.techFeePKR.toFixed(2)),
+            itemId: primaryItem,
+            ts
+          });
+          writeJSON(STORAGE_KEYS.TRANSACTIONS, STATE.transactions);
+          if (STATE.execUnlocked) renderExecutiveDashboard();
+
+          showToast(`🔐 Manifest ${trackingId} encoded & recorded!`);
+        });
+
+        $("copyManifestBtn").addEventListener("click", async () => {
+          if (!STATE.lastManifestUrl) return;
+          try {
+            await navigator.clipboard.writeText(STATE.lastManifestUrl);
+            showToast("📋 Cryptographic WhatsApp URL copied!");
+          } catch {
+            showToast("Manifest URL ready in link button.");
+          }
+        });
+
+        $("openGeneratedInvoiceBtn").addEventListener("click", () => {
+          if (!STATE.lastInvoice) return;
+          $("checkoutModal").classList.remove("open");
+          openInvoiceModal(STATE.lastInvoice);
+        });
+
+        // Sample White-Label Invoice Button in Hero
+        $("quickInvoiceSampleBtn").addEventListener("click", () => {
+          const sampleItems = STATE.cart.length > 0
+            ? JSON.parse(JSON.stringify(STATE.cart))
+            : [{ id: "OMNI-S1", name: "OmniLedger Halal ERP Cloud", optionLabel: "Enterprise (1 Yr)", unitPKR: 62400, weightKg: 0, qty: 1 }];
+          const sub = sampleItems.reduce((a, b) => a + b.unitPKR * b.qty, 0);
+          const wt = sampleItems.reduce((a, b) => a + b.weightKg * b.qty, 0);
+          const fee = sub * 0.001;
+          const tax = sub * 0.025;
+          const ship = wt > 0 ? Math.round(450 + wt * 280) : 0;
+          STATE.lastInvoice = {
+            trackingId: generateTrackingId(),
+            ts: Date.now(),
+            clientName: "Al-Mizan Enterprise Holdings",
+            clientPhone: "+92 300 000 2026",
+            clientLoc: "Gulberg III, Lahore, Pakistan",
+            hash: cryptoHash("DEMO-INVOICE-" + Date.now()),
+            items: sampleItems,
+            totals: { subtotalPKR: sub, techFeePKR: fee, taxPKR: tax, shippingPKR: ship, grandTotalPKR: sub + fee + tax + ship, totalWeight: wt }
+          };
+          openInvoiceModal(STATE.lastInvoice);
+        });
+
+        $("printInvoiceBtn").addEventListener("click", () => window.print());
+
+        // Executive Control Room Triggers & Auth Gate
+        const openExecModal = () => $("execModal").classList.add("open");
+        $("openExecBtn").addEventListener("click", openExecModal);
+        $("footerExecBtn").addEventListener("click", openExecModal);
+
+        $("execAuthForm").addEventListener("submit", (e) => {
+          e.preventDefault();
+          const key = $("execKeyInput").value.trim();
+          if (key === "OMNI-SOVEREIGN-2026") {
+            STATE.execUnlocked = true;
+            $("execAuthError").style.display = "none";
+            $("execAuthGate").style.display = "none";
+            $("execWorkspace").style.display = "block";
+            renderExecutiveDashboard();
+            showToast("🏛️ Executive Control Room Unlocked");
+          } else {
+            $("execAuthError").style.display = "block";
+          }
+        });
+
+        $("simTxBtn").addEventListener("click", () => {
+          simulateLiveTransaction();
+          showToast("⚡ Simulated real-time transaction recorded");
+        });
+
+        $("toggleAutoSimBtn").addEventListener("click", (e) => {
+          STATE.autoSim = !STATE.autoSim;
+          e.target.textContent = `▶ Auto-Stream: ${STATE.autoSim ? "ON" : "OFF"}`;
+        });
+
+        $("exportJsonBtn").addEventListener("click", () => {
+          const backup = {
+            exportedAt: new Date().toISOString(),
+            platform: "SovereignOmni.io",
+            currency: STATE.currency,
+            catalog: CATALOG_DATA,
+            transactions: STATE.transactions,
+            subscriptions: STATE.subscriptions,
+            reviews: STATE.reviews,
+            activeCart: STATE.cart
+          };
+          const blob = new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = `sovereign-omni-backup-${new Date().toISOString().slice(0, 10)}.json`;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          URL.revokeObjectURL(url);
+          showToast("⬇ Full JSON Database Exported");
+        });
+
+        // Module 4: Testimonial Slider & Submission
+        $("prevSlideBtn").addEventListener("click", () => {
+          STATE.slideIndex -= 1;
+          renderTestimonials();
+        });
+        $("nextSlideBtn").addEventListener("click", () => {
+          STATE.slideIndex += 1;
+          renderTestimonials();
+        });
+        DOM.sliderDots.addEventListener("click", (e) => {
+          const dot = e.target.closest("[data-slide]");
+          if (!dot) return;
+          STATE.slideIndex = Number(dot.getAttribute("data-slide"));
+          renderTestimonials();
+        });
+
+        $("reviewForm").addEventListener("submit", (e) => {
+          e.preventDefault();
+          const newRev = {
+            id: "rev-" + Date.now(),
+            name: $("revName").value.trim(),
+            role: $("revRole").value.trim(),
+            rating: Number($("revRating").value),
+            comment: $("revComment").value.trim()
+          };
+          STATE.reviews.unshift(newRev);
+          writeJSON(STORAGE_KEYS.REVIEWS, STATE.reviews);
+          STATE.slideIndex = 0;
+          renderTestimonials();
+          e.target.reset();
+          showToast("★ Review published to live slider!");
+        });
+
+        // Smooth scroll & Universal Modal Closers
+        $("scrollCatalogBtn").addEventListener("click", () => {
+          $("marketplace").scrollIntoView({ behavior: "smooth" });
+        });
+
+        document.addEventListener("click", (e) => {
+          const closeBtn = e.target.closest("[data-close-modal]");
+          if (closeBtn) {
+            $(closeBtn.getAttribute("data-close-modal")).classList.remove("open");
+          }
+          if (e.target.classList.contains("modal-overlay")) {
+            e.target.classList.remove("open");
+          }
+        });
+
+        // Keyboard shortcut Ctrl+Shift+K for Executive Control Room
+        document.addEventListener("keydown", (e) => {
+          if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "k") {
+            e.preventDefault();
+            openExecModal();
+          }
+        });
+      };
+
+      /* ==========================================================================
+         11. BOOTSTRAP SEQUENCE
+         ========================================================================== */
+      const boot = () => {
+        const t0 = performance.now();
+        applyTheme();
+
+        // Sync active currency pill on boot
+        DOM.currencyCapsule.querySelectorAll(".capsule-btn").forEach(btn => {
+          btn.classList.toggle("active", btn.getAttribute("data-currency") === STATE.currency);
+        });
+
+        applyTranslations();
+        renderTestimonials();
+        bindEvents();
+
+        // Automated Background Transaction Simulator (only mutates ledger smoothly every 8s)
+        setInterval(() => {
+          if (STATE.autoSim) simulateLiveTransaction();
+        }, 8000);
+
+        // Auto-advance testimonial slider smoothly every 7s
+        setInterval(() => {
+          if (!document.hidden && STATE.reviews.length > 1) {
+            STATE.slideIndex = (STATE.slideIndex + 1) % STATE.reviews.length;
+            renderTestimonials();
+          }
+        }, 7000);
+
+        recordLatency(t0);
+      };
+
+      boot();
+    })();
+  </script>
+</body>
+</html>
